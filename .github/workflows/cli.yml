@@ -33,7 +33,9 @@ jobs:
       - name: Check out code into the Go module directory
         uses: actions/checkout@v2
       - name: Set up Go 1.18b7
-        run: ./bin/ci/setup-boring-go.sh
+        run: |
+          chmod +x ./bin/ci/setup-boring-go.sh
+          ./bin/ci/setup-boring-go.sh
         id: go
       - uses: actions/cache@v2
         with:
