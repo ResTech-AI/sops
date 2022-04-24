@@ -35,7 +35,7 @@ jobs:
       - name: Set up Go 1.18b7
         run: |
           chmod +x ./bin/ci/setup-boring-go.sh
-          ./bin/ci/setup-boring-go.sh
+          ./bin/ci/setup-boring-go.sh '1.18b7'
         id: go
       - uses: actions/cache@v2
         with:
